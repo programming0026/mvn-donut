@@ -43,7 +43,7 @@ public class Donut extends JPanel implements ActionListener {
 
         int width = getWidth();
         int height = getHeight();
-        // z-buffer: guarda 1/z del punto más cercano ya dibujado en cada píxel
+ 
         double[] zBuffer = new double[width * height];
         double cosA = Math.cos(angleA), sinA = Math.sin(angleA);
         double cosB = Math.cos(angleB), sinB = Math.sin(angleB);
@@ -56,7 +56,6 @@ public class Donut extends JPanel implements ActionListener {
                 double circleX = R2 + R1 * cosTheta;
                 double circleY = R1 * sinTheta;
 
-                // Coordenadas 3D después de rotación
                 double x = circleX * (cosB * cosPhi + sinA * sinB * sinPhi) - circleY * cosA * sinB;
                 double y = circleX * (sinB * cosPhi - sinA * cosB * sinPhi) + circleY * cosA * cosB;
                 double z = K2 + cosA * circleX * sinPhi + circleY * sinA;
@@ -66,7 +65,7 @@ public class Donut extends JPanel implements ActionListener {
                 int yp = (int) (getHeight() / 2 - K1 * ooz * y);
 
                 if (xp < 0 || xp >= width - 1 || yp < 0 || yp >= height - 1 || ooz <= zBuffer[yp * width + xp]) {
-                    continue; // fuera de la ventana o tapado por un punto más cercano
+                    continue;
                 }
                 zBuffer[yp * width + xp] = ooz;
 
