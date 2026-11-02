@@ -1,4 +1,4 @@
-package com.juniverse.graphic;
+package com.juniverse.graphics;
 
 import javax.swing.JFrame;
 

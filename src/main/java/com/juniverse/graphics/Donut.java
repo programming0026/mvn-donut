@@ -1,4 +1,4 @@
-package com.juniverse.graphic;
+package com.juniverse.graphics;
 
 import java.awt.Color;
 import java.awt.Graphics;
