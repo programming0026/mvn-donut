@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 /**
  * Abre la ventana con el donut animado.
  *
- * @author ajuar
+ * @author Java Universe
  */
 public class Main {
 
